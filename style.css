@@ -1,0 +1,117 @@
+div, h2, p, img, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(216, 12%, 8%);
+}
+
+.main {
+    color: #fff;
+
+    font-family: 'Overpass';
+    width: 90%;
+    margin: auto;
+    margin-top: 5rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: hsl(213, 19%, 18%);
+
+    max-width: 386px;
+}
+
+
+.starImgContainer {
+    align-self: flex-start;
+    display: flex;
+    justify-content: center;
+    background-color: hsl(215, 16%, 24%);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1.5rem;
+}
+.img-keepsize {
+    align-self: center;
+}
+
+.header {
+    margin-bottom: 1rem;
+}
+
+.paragraph {
+    margin-bottom: 1.5rem;
+    font-size: 15px;
+    color: hsl(217, 12%, 63%);
+}
+
+.ratingChoices {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+.ratingChoice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(215, 16%, 24%);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: hsl(217, 12%, 63%);
+}
+
+.selected {
+    background-color: hsl(217, 12%, 63%);
+    color: #fff;
+}
+
+.submitBtn {
+    font-family: 'Overpass';
+    border: none;
+    color: #fff;
+    background-color: hsl(25, 97%, 53%);
+    padding: .7rem;
+    border-radius: 25px;
+}
+
+.submitBtn:hover {
+    background-color: #fff;
+    color: hsl(25, 97%, 53%);
+    cursor: pointer;
+}
+
+.ratingChoice:hover {
+    background-color: hsl(25, 97%, 53%);
+    color: #fff;
+    cursor: pointer;
+}
+
+.ratingDisplay {
+    background-color: hsl(215, 16%, 24%);
+    color: hsl(25, 97%, 53%);
+    border-radius: 25px;
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+    width: 170px;
+}
+
+.margin-bottom {
+    margin-bottom: 1.5rem;
+}
+
+.thankyouParagraph {
+    color: hsl(217, 12%, 63%);
+    font-size: 15px;
+}
+
+.centered {
+    align-items: center;
+    text-align: center;
+}
