@@ -36,7 +36,7 @@ function RatingState() {
             }
         })
 
-        ratingChoice.addEventListener("touchend", () => {
+        ratingChoice.addEventListener("touchstart", () => {
             if(ratingChoice.className.includes("selected")){
                 ratingChoice.classList.remove("selected")
             }else {
