@@ -36,6 +36,17 @@ function RatingState() {
             }
         })
 
+        ratingChoice.addEventListener("touchend", () => {
+            if(ratingChoice.className.includes("selected")){
+                ratingChoice.classList.remove("selected")
+            }else {
+                if(checkForSelected()) {
+                    checkForSelected().classList.remove("selected")
+                }
+                ratingChoice.classList.add("selected")
+            }
+        })
+
         ratingChoices.appendChild(ratingChoice)    
     }
 
