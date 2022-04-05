@@ -86,10 +86,12 @@ body {
     cursor: pointer;
 }
 
-.ratingChoice:hover {
-    background-color: hsl(25, 97%, 53%);
-    color: #fff;
-    cursor: pointer;
+@media screen and (min-width: 700px) {
+    .ratingChoice:hover {
+        background-color: hsl(25, 97%, 53%);
+        color: #fff;
+        cursor: pointer;
+    }
 }
 
 .ratingDisplay {
