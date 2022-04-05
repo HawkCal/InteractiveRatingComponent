@@ -26,14 +26,11 @@ function RatingState() {
         ratingChoice.textContent = i + 1
 
         ratingChoice.addEventListener("click", (e) => {
-            if(ratingChoice.className.includes("selected")){
-                ratingChoice.classList.remove("selected")
-            }else {
-                if(checkForSelected()) {
-                    checkForSelected().classList.remove("selected")
-                }
-                ratingChoice.classList.add("selected")
-            }
+            RatingChoiceEventHandler(e, ratingChoice)
+        })
+
+        ratingChoice.addEventListener("touchstart", (e) => {
+            RatingChoiceEventHandler(e, ratingChoice)
         })
 
         ratingChoices.appendChild(ratingChoice)    
@@ -43,14 +40,11 @@ function RatingState() {
     submitBtn.setAttribute("class", "submitBtn")
     submitBtn.textContent = "SUBMIT"
 
-    submitBtn.addEventListener("click", () => {
-        let rating = Array.from(document.querySelectorAll(".ratingChoice")).find(item => item.className.includes("selected"))
-
-        if(rating) {
-            clearDisplay()
-            ThankyouState(rating.textContent)
-        }
-
+    submitBtn.addEventListener("click", (e) => {
+        submitBtnEventHandler(e)
+    })
+    submitBtn.addEventListener("touchstart", (e) => {
+        submitBtnEventHandler(e)
     })
 
     main.appendChild(starImgContainer)
@@ -98,6 +92,29 @@ function clearDisplay() {
 
     while(main.firstChild) {
         main.removeChild(main.firstChild)
+    }
+}
+
+function RatingChoiceEventHandler(e, ratingChoice) {
+    e.preventDefault()
+
+    if(ratingChoice.className.includes("selected")){
+        ratingChoice.classList.remove("selected")
+    }else {
+        if(checkForSelected()) {
+            checkForSelected().classList.remove("selected")
+        }
+        ratingChoice.classList.add("selected")
+    }
+}
+
+function submitBtnEventHandler(e) {
+    e.preventDefault()
+    let rating = Array.from(document.querySelectorAll(".ratingChoice")).find(item => item.className.includes("selected"))
+
+    if(rating) {
+        clearDisplay()
+        ThankyouState(rating.textContent)
     }
 }
 
