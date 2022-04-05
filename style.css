@@ -80,16 +80,15 @@ body {
     border-radius: 25px;
 }
 
-.submitBtn:hover {
-    background-color: #fff;
-    color: hsl(25, 97%, 53%);
-    cursor: pointer;
-}
-
 @media screen and (min-width: 700px) {
     .ratingChoice:hover {
         background-color: hsl(25, 97%, 53%);
         color: #fff;
+        cursor: pointer;
+    }
+    .submitBtn:hover {
+        background-color: #fff;
+        color: hsl(25, 97%, 53%);
         cursor: pointer;
     }
 }
