@@ -36,17 +36,6 @@ function RatingState() {
             }
         })
 
-        ratingChoice.addEventListener("touchstart", () => {
-            if(ratingChoice.className.includes("selected")){
-                ratingChoice.classList.remove("selected")
-            }else {
-                if(checkForSelected()) {
-                    checkForSelected().classList.remove("selected")
-                }
-                ratingChoice.classList.add("selected")
-            }
-        })
-
         ratingChoices.appendChild(ratingChoice)    
     }
 
